@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Walmart Sales Forecasting</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2a52be;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #2a52be;
+      margin-top: 40px;
+      font-size: 1.6rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .metrics {
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px 0;
+      overflow-x: auto;
+    }
+
+    .metrics table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 400px;
+    }
+
+    .metrics th, .metrics td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .metrics th {
+      background-color: #dbe4ff;
+    }
+
+    .author-links a {
+      color: #2a52be;
+      text-decoration: none;
+    }
+
+    .author-links a:hover {
+      text-decoration: underline;
+    }
+
+    .predict-btn-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .predict-btn-container button {
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      background-color: #2a52be;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .predict-btn-container button:hover {
+      background-color: #1e3d94;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        padding: 0 15px;
+      }
+
+      .metrics table {
+        font-size: 0.95rem;
+      }
+
+      .predict-btn-container button {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📊 Walmart Sales Forecasting Project</h1>
+    <p>Using Linear Regression to predict weekly sales across Walmart stores</p>
+  </header>
+
+  <div class="container">
+    <h2>📌 Project Objective</h2>
+    <p>
+      This project aims to predict <strong>Weekly_Sales</strong> using a Linear Regression model
+      based on Walmart's historical data, holiday information, and economic indicators.
+    </p>
+
+    <h2>📁 Dataset Overview</h2>
+    <ul>
+      <li><strong>train.csv</strong>: Weekly sales data by store and department</li>
+      <li><strong>features.csv</strong>: Economic data (Temperature, Fuel_Price, etc.)</li>
+      <li><strong>stores.csv</strong>: Store metadata (type, size)</li>
+    </ul>
+
+    <h2>🧪 Features Used</h2>
+    <ul>
+      <li>Store, Dept, IsHoliday</li>
+      <li>Temperature, Fuel_Price, CPI, Unemployment</li>
+      <li>Date (extracted month, year)</li>
+    </ul>
+
+    <h2>📈 Model Used: Linear Regression</h2>
+    <p>
+      The model was trained using <strong>scikit-learn</strong> to forecast sales. Data preprocessing
+      involved handling missing values, encoding, and feature engineering.
+    </p>
+
+    <div class="metrics">
+      <h2>📊 Key Metrics</h2>
+      <table>
+        <tr>
+          <th>Metric</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>MAE</td>
+          <td>0.020492</td>
+        </tr>
+        <tr>
+          <td>RMSE</td>
+          <td>0.0242305</td>
+        </tr>
+        <tr>
+          <td>R² Score</td>
+          <td>0.9762</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>👤 Author</h2>
+    <p>
+      <strong>Patel Huzefa</strong><br />
+      Data Science Enthusiast<br />
+      <span class="author-links">
+        LinkedIn: <a href="https://www.linkedin.com/in/patel-huzaifa-7006432bb/" target="_blank">patel huzaifa</a><br />
+        GitHub: <a href="https://github.com/Shaikhhuzefa59/walmartsales" target="_blank">walmartsales</a>
+      </span>
+    </p>
+
+    <div class="predict-btn-container">
+      <button onclick="location.href='/form'">🔮 Predict Sales</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Walmart Sales Forecasting Project. All rights reserved.
+  </footer>
+
+</body>
+</html>

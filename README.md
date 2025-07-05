@@ -19,11 +19,11 @@ Trained on preprocessed features to predict Weekly_Sales.
 
 ### Evaluated using:
 
-Mean Absolute Error (MAE)
+Mean Squared Error (0.000587)
 
-Root Mean Squared Error (RMSE)
+Root Mean Squared Error (0.024230576302570275)
 
-R² Score
+R² Score (0.9762)
 
 
 ### Software And Tools Requirements
